@@ -1,0 +1,49 @@
+﻿@model Registration_Login.Models.LoginSignupModel;
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<div class="cantainer">
+    <div class="row">
+        <div class="col-4 offset-4  border  border-3  rounded-3 pl-5 pr-5 pb-5  ">
+            <div class="text-center">
+                <h1 class="text-success">User Login</h1>
+            </div>
+
+            <form method="post" asp-action="Login">
+                <div class="form-group">
+                    <label asp-for="UserName">UserName</label>
+                    <input type="text" asp-for="UserName" class="form-control" placeholder="Enter user Name" autocomplete="off" />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Password">Password</label>
+                    <input type="password" asp-for="Password" class="form-control" placeholder="Enter user Password" autocomplete="off" />
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" asp-for="IsRemeber"  />
+                    <label asp-for="IsRemeber">Remeber Me</label>
+
+                </div>
+
+                
+
+                <div class="form-group">
+                    <input type="submit" class="btn btn-success btn-lg mb-1 mt-2   pr-3 float-md-star" value="Login" />
+                
+                    <input type="submit" class="btn btn-primary btn-lg mb-1 mt-2 pl-3  pr-3 float-md-end" asp-action="Add_Data" asp-controller="Account" value="SignUp" />
+                </div>
+
+            </form>
+            <div>
+                <a class="text-primary float-md-start" asp-action="ForgateUsername">Forgate Username</a>
+                <a class="text-primary float-md-end " asp-action="ForgatePassword">Forgate Password</a>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+

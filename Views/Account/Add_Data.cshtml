@@ -1,0 +1,35 @@
+﻿@model Registration_Login.Models.AddData
+
+@{
+    ViewData["Title"] = "Add_Data";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+@{
+}
+<form asp-action="Add_Data" asp-controller="Account" method="post">
+    <div class="mb-3">
+        <label for="" class="form-label">UserName</label>
+        <input type="text" class="form-control" asp-for="UserName">
+
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Email</label>
+        <input type="email" class="form-control" asp-for="Email">
+
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Password</label>
+        <input type="password" class="form-control" asp-for="Password">
+
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">ConfirmPassword</label>
+        <input type="password" class="form-control" asp-for="ConfirmPassword">
+
+
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
